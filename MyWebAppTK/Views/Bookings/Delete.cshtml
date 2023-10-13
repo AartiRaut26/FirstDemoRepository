@@ -1,0 +1,73 @@
+﻿@model BookingsModel
+
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-3">
+			<h2 class="text-primary">Delete Booking</h2>
+			<hr/>
+			<input type="hidden" asp-for="Booking_Id"></input>
+		</div>
+		<div asp-validation-summary="All"></div>
+		<div class="row mb-3">
+			<label asp-for="Client_Name"></label>
+			<input disabled asp-for="Client_Name" class="form-control"/>
+			<span asp-validation-for="Client_Name" class="text-danger">Name Field Is Required</span>
+
+			
+		</div>
+
+		<div class="row mb-3">
+			<label asp-for="DateOfBirth"></label>
+			<input disabled asp-for="DateOfBirth" class="form-control" />
+			<span asp-validation-for="DateOfBirth" class="text-danger">DOB Is Required</span>
+
+		</div>
+
+		<div class="row mb-3">
+			<label asp-for="Email"></label>
+			<input disabled asp-for="Email" class="form-control" />
+			<span asp-validation-for="Email" class="text-danger">Email Is Required</span>
+
+		</div>
+
+		<div class="row mb-3">
+			<label asp-for="Client_City"></label>
+			<input disabled asp-for="Client_City" class="form-control" />
+			<span asp-validation-for="Client_City" class="text-danger">City Is Required</span>
+
+		</div>
+
+		<div class="row mb-3">
+			<label asp-for="Display_Booking"></label>
+			<input disabled asp-for="Display_Booking" class="form-control" />
+			<span asp-validation-for="Display_Booking" class="text-danger">Display Booking Field Is Required</span>
+
+		</div>
+
+		<div class="row mb-3">
+			<label asp-for="Booking_Date"></label>
+			<input disabled asp-for="Booking_Date" class="form-control" />
+			<span asp-validation-for="Booking_Date" class="text-danger">Booking Date Is Required</span>
+
+		</div>
+
+		<button class="btn btn-primary" type="submit">Delete</button>
+	</div>
+
+	<a asp-controller="Bookings" asp-action="Index">Show Booking List</a>
+
+
+</form>
+
+@section scripts{
+	@{
+		<partial name="_ValidationScriptsPartial"/>
+	}
+
+}
+ 
+
+
+
+
+

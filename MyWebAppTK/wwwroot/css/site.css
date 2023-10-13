@@ -1,0 +1,23 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url('https://t4.ftcdn.net/jpg/04/62/62/39/240_F_462623978_x3dc11MFHgQy6kQOgvQjHA6mR5ss2YXM.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Adjust this as needed to control how the image is scaled */
+    background-repeat: no-repeat;
+}
+
+
